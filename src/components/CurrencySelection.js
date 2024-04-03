@@ -1,24 +1,29 @@
-import React, { useState } from 'react';
-// import { AppContext } from '../context/AppContext';
+import React, { useContext} from 'react';
+import { AppContext } from '../context/AppContext';
 
 const CurrencySelection = () => {
 
-    const [currency, setCurrency] = useState('');
-
+    const { dispatch } = useContext(AppContext);
 
     const handleChange = (event) => {
-        setCurrency(event.target.value);
+
+        const currency = event.target.value;
+        dispatch({
+            type: 'CHG_CURRENCY',
+            payload: event.target.value
+        });
+
     };
 
 
     return (
 
         <select className="greenSelect" id="inputGroupSelect06" onChange={handleChange}>
-            <option defaultValue>Select...</option>
-            <option value="$ Dollar" name="dollar"> $ Dollar</option>
-            <option value="£ Pound" name="pound">£ Pound</option>
-            <option value="€ Euro" name="euro">€ Euro</option>
-            <option value="₹ Ruppee" name="ruppee">₹ Ruppee</option>
+            <option defaultValue>Currency</option>
+            <option value="$" name="dollar"> $ Dollar</option>
+            <option value="£" name="pound">£ Pound</option>
+            <option value="€" name="euro">€ Euro</option>
+            <option value="₹" name="ruppee">₹ Ruppee</option>
 
         </select>
 

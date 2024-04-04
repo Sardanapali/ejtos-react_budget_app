@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { PieChart, Pie } from "recharts";
+import { PieChart, Pie, Cell,Legend ,Tooltip} from 'recharts';
+
 import { AppContext } from '../context/AppContext';
 
 function RePieChart() {
@@ -11,28 +12,29 @@ const data = [];
 expenses.forEach(element => {
     data.push({
 name: element.name,
-value: element.cost
+value: element.cost,
+color: element.color
     });
 });
 
-//   const data01 = [
-//     { name: "Team A", value: 800 },
-//     { name: "Team B", value: 600 },
-//     { name: "Team C", value: 300 },
-//     { name: "Team D", value: 200 },
-//   ];
-
   return (
     <div>
-        <PieChart width={200} height={200}>
+        <PieChart width={400} height={300}>
           <Pie
             data={data}
             dataKey="value"
             outerRadius={60}
-            fill="#8884d8"
-          />
-
+            fill={data.color}
+            label
+          >
+              {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={entry.color} />
+            ))}
+          </Pie>
+          <Tooltip />
+        <Legend  verticalAlign="bottom"></Legend>
         </PieChart>
+       
       
     </div>
   );

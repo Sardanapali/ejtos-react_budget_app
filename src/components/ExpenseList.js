@@ -14,12 +14,12 @@ const ExpenseList = () => {
               <th scope="col">Allocated Budget</th>
               <th scope="col">Increase by 10</th>
               <th scope="col">Decrease by 10</th>
-              <th scope="col">Delete</th>
+              <th scope="col">Remove budget</th>
             </tr>
           </thead>
             <tbody>
             {expenses.map((expense) => (
-                <ExpenseItem id={expense.id} key={expense.id} name={expense.name} cost={expense.cost} />
+                <ExpenseItem id={expense.id} key={expense.id} name={expense.name} cost={expense.cost} color={expense.color} />
             ))}
             </tbody>
         </table>

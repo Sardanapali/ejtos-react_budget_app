@@ -24,51 +24,20 @@
     color: white;
 }
 
-.add {
-    display: block;
+.btn-circle {
     width: 32px;
     height: 32px;
-    border-radius: 50%;
-    background: green;
-    box-shadow: 0 2px 2px #888888;
-    border: 1px solid green;
-    color: white;
-    font-weight: bold;
-
-}
-
-.remove {
-    display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    /* background:gray; */
-    /* box-shadow: 0 2px 2px #888888; */
-    /* border: 1px solid gray;  */
-
-}
-
-.delete {
-    display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: rgb(255, 0, 0);
-    box-shadow: 0 2px 2px #888888;
-    border: 1px solid red;
-    color: white;
-    font-weight: bold;
-
+    border-radius: 60px;
+    font-size: 12px;
+    text-align: center;
 }
 
 
-.greenSelect{
-    background-color: rgb(149 231 170);
-    border-radius: 8px;
-    color: white;
-    width: 100%;
-    border: 1px solid rgb(149 231 170);
+
+.greenSelect {
+    width: 70%;
     height: 40px;
+    margin-left: 0.2rem;
 }
 
 

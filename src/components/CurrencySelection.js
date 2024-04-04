@@ -17,8 +17,8 @@ const CurrencySelection = () => {
 
 
     return (
-
-        <select className="greenSelect" id="inputGroupSelect06" onChange={handleChange}>
+  <div >
+ <select className ="greenSelect" id="inputGroupSelect06" onChange={handleChange}>
             <option defaultValue>Currency</option>
             <option value="$" name="dollar"> $ Dollar</option>
             <option value="£" name="pound">£ Pound</option>
@@ -26,6 +26,8 @@ const CurrencySelection = () => {
             <option value="₹" name="ruppee">₹ Ruppee</option>
 
         </select>
+  </div>
+       
 
     );
 };

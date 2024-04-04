@@ -13,7 +13,7 @@ import PieChart from './components/piechart';
 
 const App = () => {
     return (
-        <AppProvider data-bs-theme="dark">
+        <AppProvider>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
                 <h3 className='mt-3'>Budget</h3>
